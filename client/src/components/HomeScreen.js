@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from 'react'
 import { GlobalStoreContext } from '../store'
 import ListCard from './ListCard.js'
+import AppBanner from './AppBanner.js'
+
 import MUIDeleteModal from './MUIDeleteModal'
 
 import AddIcon from '@mui/icons-material/Add';
@@ -38,7 +40,14 @@ const HomeScreen = () => {
             </List>;
     }
     return (
+        
         <div id="playlist-selector">
+             <div id="log">
+                {
+                    AppBanner
+                }
+                <MUIDeleteModal />
+            </div>
             <div id="list-selector-heading">
             <Fab 
                 color="primary" 
@@ -48,7 +57,8 @@ const HomeScreen = () => {
             >
                 <AddIcon />
             </Fab>
-                <Typography variant="h2">Your Lists</Typography>
+                <Typography variant="h2">Yoursdfh Lists</Typography>
+            
             </div>
             <div id="list-selector-list">
                 {
