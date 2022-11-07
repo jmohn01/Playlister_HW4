@@ -36,12 +36,7 @@ function SongCard(props) {
     function handleRemoveSong(event) {
         store.showRemoveSongModal(index, song);
     }
-    function handleClick(event) {
-        // DOUBLE CLICK IS FOR SONG EDITING
-        if (event.detail === 2) {
-            store.showEditSongModal(index, song);
-        }
-    }
+  
 
     let cardClass = "list-card unselected-list-card";
     return (
@@ -55,7 +50,7 @@ function SongCard(props) {
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
             draggable="true"
-            onClick={handleClick}
+           
         >
             {index + 1}.
             <a
