@@ -30,24 +30,28 @@ function EditToolbar() {
     return (
         <div id="edit-toolbar">
             <Button
+                disabled={!store.canAddNewSong()}
                 id='add-song-button'
                 onClick={handleAddNewSong}
                 variant="contained">
                 <AddIcon />
             </Button>
             <Button 
+                disabled={!store.canUndo()}
                 id='undo-button'
                 onClick={handleUndo}
                 variant="contained">
                     <UndoIcon />
             </Button>
             <Button 
+                disabled={!store.canRedo()}
                 id='redo-button'
                 onClick={handleRedo}
                 variant="contained">
                     <RedoIcon />
             </Button>
             <Button 
+                disabled={!store.canClose()}
                 id='close-button'
                 onClick={handleClose}
                 variant="contained">
@@ -56,5 +60,4 @@ function EditToolbar() {
         </div>
     )
 }
-
 export default EditToolbar;
